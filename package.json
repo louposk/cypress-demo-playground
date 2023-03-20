@@ -1,0 +1,22 @@
+{
+  "name": "cypress-demo-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louposk/cypress-demo-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louposk/cypress-demo-playground/issues"
+  },
+  "homepage": "https://github.com/louposk/cypress-demo-playground#readme",
+  "devDependencies": {
+    "cypress": "^12.8.1"
+  }
+}
