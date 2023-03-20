@@ -29,19 +29,19 @@ import menu from '../selectors/menu.sel'
  * Overwrite login functionality
  * 
  */
-Cypress.Commands.add('login',() => {
-    cy.request({
-        method: 'POST',
-        url: 'https://api.realworld.io/api/users/login',
-        body: {
-            user: {
-                email: '123555666@gmail.com', 
-                password: '123555666'
-            }
-        }
-    })
+Cypress.Commands.add('login', () => {
+  cy.request({
+    method: 'POST',
+    url: 'https://api.realworld.io/api/users/login',
+    body: {
+      user: {
+        email: '123555666@gmail.com',
+        password: '123555666',
+      }
+    }
+  })
     .then((resp) => {
-        window.localStorage.setItem('jwnt',resp.body.user.token)
+      window.localStorage.setItem('jwtToken', resp.body.user.token) 
     })
 })
 
@@ -50,8 +50,8 @@ Cypress.Commands.add('login',() => {
  * Navigation to menu
  * 
  */
-Cypress.Commands.add('navigateTo',(menuName) => {
-    if(menuName == 'Sign Up') {
-        cy.get(menu.signUp).should('be.visible').click()
-    }
+Cypress.Commands.add('navigateTo', (menuName) => {
+  if (menuName == 'Sign Up') {
+    cy.get(menu.signUp).should('be.visible').click()
+  }
 })
